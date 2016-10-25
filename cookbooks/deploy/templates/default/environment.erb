@@ -1,0 +1,6 @@
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+
+<% @app_env_hash.each do |key, value| %>
+<%= key %>=<%= value %>
+<% end %>
+

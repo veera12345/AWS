@@ -1,0 +1,9 @@
+<% @hosts.each_entry do |repo_domain, host| %>
+HOST                       <%= repo_domain %>
+  HostName                 <%= repo_domain %>
+  <% host.each do |url, identity_file_name, user| %>
+  IdentityFile             /root/.ssh/<%= identity_file_name %>
+  User                     <%= user %>
+  <% end %>
+  StrictHostKeyChecking    no
+<% end %>
